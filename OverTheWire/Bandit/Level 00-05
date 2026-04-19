@@ -5,4 +5,5 @@ Objective: The goal of this level is for you to log into the game using SSH. The
 Solution: For this task I utilized the command prompt to write down the ssh command needed to connect to OverTheWire's linux server. 
 Command is 'ssh bandit0@bandit.labs.overthewire.org -p 2220'
 Where: ssh is the protocol, bandit0 is mentioned as the username as given, bandit.labs.overthewire...etc is the domain name and the -p command allows me to connect to the port number listed as 2220, if this were a standard SSH, it would be -p 22 since it uses 22 as the default, but OverTheWire uses 2220 as the norm.
+Upon entering the command we'll be asked to register the id as a fingerprint, type 'yes' and then repeat the command again to type in the password which is shown in the objective above
 [Screenshot for the level is in the screenshot subfolder]
