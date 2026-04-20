@@ -1,3 +1,5 @@
+[All screenshots are in the screenshot subfolder]
+
 #Level 0
 
 Objective: The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. 
@@ -7,3 +9,12 @@ Command is 'ssh bandit0@bandit.labs.overthewire.org -p 2220'
 Where: ssh is the protocol, bandit0 is mentioned as the username as given, bandit.labs.overthewire...etc is the domain name and the -p command allows me to connect to the port number listed as 2220, if this were a standard SSH, it would be -p 22 since it uses 22 as the default, but OverTheWire uses 2220 as the norm.
 Upon entering the command we'll be asked to register the id as a fingerprint, type 'yes' and then repeat the command again to type in the password which is shown in the objective above
 [Screenshot for the level is in the screenshot subfolder]
+
+#Level 1
+
+Objective: The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
+
+Solution:
+After logging into the linux server using the SSH command and the provided password for Level 0, on the next Level, I had to find a new password stored within one of the files. 
+For this task, in order to find what are the given files in that directory, I had used the ls command to list the provided files, upon doing that the only given file there was a 'Readme' file. 
+In order to display the contents of the file I had utilized the 'cat' command or more specifically [cat ReadMe] to list down the contents within the file. The password for the next level was given there as [REDACTED].
