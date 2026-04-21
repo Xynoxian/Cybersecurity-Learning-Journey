@@ -33,6 +33,7 @@ Objective: The password for the next level is stored in a file called --spaces i
 
 Solution: This was rather challenging overall. The main issue I faced was the failure of the [cat] command numerous times. I failed to get the value within the file even by writing commands like
 [cat ./--spaces in this filename--] or [cat "spaces in this filename"] among many other attempts. Finally I learnt the issue that the first attemp was right in a way but it needed quotes along with the statement
-for it to truly work. The correct command was therefore [cat "./--spaces in this filename--"] which worked.
+for it to truly work. The correct command was therefore [cat "./--spaces in this filename--"] which worked. 
+Turns out, when encountering a filename with leading dashes (--), the cat command misinterpreted this as an option flag. Solved this by using a relative path (./) to force the shell to treat the string as a filename.
 
  
