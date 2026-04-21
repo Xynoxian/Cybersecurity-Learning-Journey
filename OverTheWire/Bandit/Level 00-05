@@ -26,3 +26,13 @@ Objective: The password for the next level is stored in a file called - located 
 Solution: Similar to the previous level I used the ls command to find the file named '-' within the directory and promptly used the cat function. But a new feature I had noticed was that simply writing a command like
 [cat -] made the console freeze or unresponsive. On a troubleshooting readup, I found out that in Linux, a single dash often stands for "Standard Input." 
 The computer thinks you want to type data into it, rather than read a file named dash. So the workaround to this problem was using the command [cat ./-] instead
+
+#Level 2-3:
+
+Objective: The password for the next level is stored in a file called --spaces in this filename-- located in the home directory
+
+Solution: This was rather challenging overall. The main issue I faced was the failure of the [cat] command numerous times. I failed to get the value within the file even by writing commands like
+[cat ./--spaces in this filename--] or [cat "spaces in this filename"] among many other attempts. Finally I learnt the issue that the first attemp was right in a way but it needed quotes along with the statement
+for it to truly work. The correct command was therefore [cat "./--spaces in this filename--"] which worked.
+
+ 
