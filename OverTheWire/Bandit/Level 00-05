@@ -44,4 +44,12 @@ Solution: Using ls command, we find the directory 'inhere', we use the cd comman
 but the one I used was 'ls -a' to list all files hidden or otherwise irrespective if they start with a '.', as such it listed a file named '...Hiding-From-You', a simple cat command for cat "...Hiding-From-You" sorts
 the issue and provides the next password.
 
- 
+#Level 4-5:
+
+Objective: The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+
+Solution: Using the ls command like before we find the directory named 'inhere', we use cd to enter the directory and then 'ls -a' to find all available items within the directory, after this it's a method of trial 
+and error by using the cat command or 'cat ./<file_name>' for all available items until we arrive at a human readable piece of text which is the password for the next level.
+
+#Level 5-6:
+
