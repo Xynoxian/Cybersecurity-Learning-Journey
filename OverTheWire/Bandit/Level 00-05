@@ -36,4 +36,12 @@ Solution: This was rather challenging overall. The main issue I faced was the fa
 for it to truly work. The correct command was therefore [cat "./--spaces in this filename--"] which worked. 
 Turns out, when encountering a filename with leading dashes (--), the cat command misinterpreted this as an option flag. Solved this by using a relative path (./) to force the shell to treat the string as a filename.
 
+#Level 3-4:
+
+Objective: The password for the next level is stored in a hidden file in the inhere directory.
+
+Solution: Using ls command, we find the directory 'inhere', we use the cd command to navigate into the directory, 'cd inhere', upon doing that we need to find the hidden file, there are multiple ways to do this
+but the one I used was 'ls -a' to list all files hidden or otherwise irrespective if they start with a '.', as such it listed a file named '...Hiding-From-You', a simple cat command for cat "...Hiding-From-You" sorts
+the issue and provides the next password.
+
  
