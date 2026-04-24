@@ -53,3 +53,13 @@ and error by using the cat command or 'cat ./<file_name>' for all available item
 
 #Level 5-6:
 
+Objective: The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+human-readable
+1033 bytes in size
+not executable
+
+Solution: This was a rather challenging level indeed, the way I had tackled this issue was primarily to learn the workings of the 'find' command. A method of trial and error for each of the commands, for human readable
+it means the file needs to be in the ASCII format, however upon using the command [find . -type f -exec file {} + | grep "ASCII"] made multiple files show up with all ASCII or human readable format, so 
+this too was a failure. Now I tried one last command for the size, 'find . -size 1033c' , upon doing this a file in the inhere directory named '.file2' showed up, as such upon reading the contents of the file
+gave the password to the next level. However this method of trial and error proved to be HIGHLY inefficient in a real world setting, so I found a more time effective manner by merging all the commands to 
+find the file regardless, 'find . -type f -size 1033c ! -executable' is a work all command that pinpointed the exact file as well.
