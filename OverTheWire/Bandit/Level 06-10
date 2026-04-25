@@ -1,1 +1,12 @@
 #Level 6-7
+
+Objective: The password for the next level is stored somewhere on the server and has all of the following properties:
+
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
+
+Solution: For this part of the lab, since the password isn't located in a specific file location but somewhere on the entirety of the server, the best method to snuff it out is to use the 'find' command.
+However simply writing the 'find' command with 'find . etc' won't cut it since the fullstop is used for file locations and not server side actions. So the best method I learned is to use the '/' instead of a fullstop.
+So the command was 'find / -size 33c -group bandit6 -user bandit7' and then there will be a plethora of outputs which show 'Permission Denied' and so on, from these outputs we need to find the single one with the correct
+location and no permissions denied. And upon finding the filepath we simply paste it and throw in the 'cat' command to get the password. There are 2 screenshots to show the files of permission denied and how to find the password.
