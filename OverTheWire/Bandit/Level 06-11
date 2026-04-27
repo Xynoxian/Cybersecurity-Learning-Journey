@@ -24,9 +24,14 @@ as it searches through all files searching for that one specific keyword.
 Objective: The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
 
 Solution: For this level the best way to find a unique word in the list of words that exist in data.txt is to use a combo of the sort and uniq commands. So upon further learning, 'sort data.txt | uniq -u' is the command
-that I had come to understand to use.
+that I had come to understand to use. It sorts the values of the data.txt while choosing only the uniquely occuring value from a list of regurgitating values.
 
 #Level 9-10
 
 Objective: The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
 
+Solution: Since this file stores information in human-readable strings, the 'strings' command is the best suited for pulling the readable aspect of the file. Furthermore since it is preceded by '=' signs, we use
+grep along with it too. So the command I used is 'strings data.txt | grep "=" ' to pull the information from the file. 
+
+
+#Level 10-11:
