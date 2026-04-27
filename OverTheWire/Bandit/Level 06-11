@@ -40,3 +40,8 @@ Objective: The password for the next level is stored in the file data.txt, which
 
 Solution: This was a personal favorite of mine, since the information text in data.txt is encoded in base64 syntax, our main objective is to DECODE the data into a human readable format, for this using the base64
 command in conjunction with -d (or decode) is to be used. So the command we use is 'base64 -d data.txt'
+
+#Level 11-12:
+
+Objective: The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
