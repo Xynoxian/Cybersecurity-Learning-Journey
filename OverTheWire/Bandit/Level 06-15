@@ -56,7 +56,7 @@ against a correctly shifted output set, instantly transforming the gibberish fou
 Objective:The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory 
 under /tmp in which you can work. Use mkdir with a hard to guess directory name. Or better, use the command “mktemp -d”. Then copy the datafile using cp, and rename it using mv (read the manpages!)
 
-Solution: Upon encountering this problem, I struggled a lot. First a regular cat command failes because it's in a hexdump format which makes the internal data look like a bunch of gibberish or hogwash.
+Solution: Upon encountering this problem, I struggled a lot. First a regular cat command fails because it's in a hexdump format which makes the internal data look like a bunch of gibberish or hogwash.
 The main issue in this file is that the data.txt file is compressed many times over .gz (gunzip) , .bz (bunzip) and .tar (POSIX tar) formats over and over again causing the file's ASCII contents to look 
 like a trashcan of Hexadecimal dumps. The core objective it to make a directory (via the 'mktemp -d' command) then move into that directory  using cd and then copying the data.txt file (via the 'cp ~/data.txt .'
 command). After doing that I made a silly mistake by renaming the file and making a new one using the 'mv data.txt new_file' command, but realized that it would fail because data.txt first needs to be converted
@@ -67,3 +67,11 @@ Compression command: mv new_file new_file.bz , mv new_file new_file.tar
 Decompression command: bunzip2 new_file.bz , tar -xf new_file.tar
 Upon compressing and decompressing we need to simultaenously check the contents of the unpacked file that pops out to check the format (whether it is gzip, bzip or POSIX tar) and then compress it and decompress it
 over and over until the final file is in an ASCII format. Then that file contains the password. 
+
+#Level 13-14:
+
+Objective: The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Look at the commands that logged you into previous bandit levels, and find out how to use the key for this level.
+If you need help with this level: a hint file can be found in the home directory.
+Make sure to read the error messages as they are informative.
+
+Solution:
